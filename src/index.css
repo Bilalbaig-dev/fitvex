@@ -1,0 +1,43 @@
+:root {
+  --primary-red: #e62222;
+  --bg-black: #121212;
+  --text-white: #ffffff;
+  --accent-dark: #1a1a1a;
+  --font-heading: 'Oswald', sans-serif;
+  --font-body: 'Roboto Condensed', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-black);
+  color: var(--text-white);
+  font-family: var(--font-body);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* The signature red slant from your design */
+.red-accent {
+  background: var(--primary-red);
+  clip-path: polygon(15% 0, 100% 0, 85% 100%, 0% 100%);
+  padding: 5px 15px;
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+}
+/* The initial hidden state */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+/* The visible state when scrolling */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}

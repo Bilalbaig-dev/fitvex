@@ -1,0 +1,179 @@
+/* --- CART / REQUEST QUOTE PAGE --- */
+.cart-container { 
+  padding: 100px 10%; 
+  color: white; 
+  background: #0a0a0a; 
+  min-height: 80vh; 
+}
+
+.cart-title { 
+  font-style: italic; 
+  font-weight: 900; 
+  margin-bottom: 40px; 
+  font-size: 2rem; 
+}
+
+.cart-layout { 
+  display: grid; 
+  grid-template-columns: 2fr 1fr; 
+  gap: 40px; 
+}
+
+/* --- ITEM CARDS --- */
+.cart-item-card { 
+  background: #111; 
+  padding: 20px; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  border-bottom: 1px solid #222;
+  margin-bottom: 15px;
+}
+
+.cart-item-info { 
+  display: flex; 
+  gap: 15px; 
+  align-items: center;
+}
+
+.cart-item-info img { 
+  width: 80px; 
+  height: 80px; 
+  object-fit: cover; 
+  border-radius: 5px;
+}
+
+.cart-item-details { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 5px;
+}
+
+.cart-item-details span { 
+  font-size: 0.9rem; 
+  color: #888; 
+}
+
+/* --- REMOVE BUTTON --- */
+.remove-btn { 
+  background: none; 
+  border: 1px solid #444; 
+  color: #444; 
+  padding: 5px 15px; 
+  cursor: pointer; 
+  transition: 0.3s;
+}
+
+.remove-btn:hover { 
+  color: #e62222; 
+  border-color: #e62222; 
+}
+
+/* --- ORDER SUMMARY SIDEBAR --- */
+.order-summary { 
+  background: #000; 
+  padding: 30px; 
+  border: 1px solid #222; 
+  height: fit-content;
+  position: relative;
+}
+
+.order-summary h2 { 
+  font-size: 1rem; 
+  border-bottom: 1px solid #333; 
+  padding-bottom: 10px; 
+  margin-bottom: 20px; 
+}
+
+.summary-row { 
+  display: flex; 
+  justify-content: space-between; 
+  margin-bottom: 10px; 
+  color: #888; 
+  font-size: 0.9rem; 
+}
+
+.summary-total { 
+  display: flex; 
+  justify-content: space-between; 
+  margin-top: 30px; 
+  padding-top: 20px; 
+  border-top: 2px solid #e62222; 
+}
+
+.checkout-btn { 
+  width: 100%; 
+  margin-top: 20px; 
+  padding: 15px; 
+  background: var(--primary-red); 
+  color: white; 
+  border: none; 
+  font-weight: 900; 
+  text-transform: uppercase; 
+  cursor: pointer; 
+  transition: 0.3s;
+}
+
+.checkout-btn:hover { 
+  background: #ff2e2e; 
+}
+
+/* Quote Form Styles (Added) */
+.quote-form-box input,
+.quote-form-box textarea {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid #333;
+  color: white;
+  margin-bottom: 10px;
+  font-family: var(--font-roboto);
+}
+
+.quote-form-box input:focus,
+.quote-form-box textarea:focus {
+  border-color: var(--primary-red);
+  outline: none;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-family: var(--font-oswald);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+  color: #ccc;
+}
+
+.quote-qty-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quote-qty-control label {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.qty-input {
+  background: #222;
+  border: 1px solid #444;
+  color: white;
+  padding: 5px 10px;
+  width: 70px;
+  text-align: center;
+  font-family: var(--font-roboto);
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.qty-input:focus {
+  border-color: var(--primary-red);
+  outline: none;
+}

@@ -1,0 +1,139 @@
+/* src/About.css */
+.about-container {
+  min-height: 100vh;
+  color: white;
+  padding-bottom: 80px;
+}
+
+/* HERO */
+.about-hero {
+  padding: 120px 10%;
+  text-align: center;
+  position: relative;
+  background-color: #050505;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(230, 34, 34, 0.15) 0%, transparent 60%),
+    linear-gradient(45deg, #111 25%, transparent 25%, transparent 75%, #111 75%, #111),
+    linear-gradient(45deg, #111 25%, transparent 25%, transparent 75%, #111 75%, #111);
+  background-size: 100% 100%, 20px 20px, 20px 20px;
+  background-position: 0 0, 0 0, 10px 10px;
+  overflow: hidden;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(5, 5, 5, 0.8) 100%);
+  pointer-events: none;
+}
+
+.about-hero h1 {
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-style: italic;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: #ccc;
+}
+
+/* CONTENT */
+.about-content {
+  padding: 80px 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about-text {
+  max-width: 800px;
+  margin-bottom: 60px;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #bbb;
+  margin-bottom: 20px;
+}
+
+/* STATS */
+.about-stat-grid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.stat-card {
+  background: #111;
+  padding: 30px;
+  border: 1px solid #333;
+  width: 200px;
+  transition: transform 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  border-color: #e62222;
+}
+
+.stat-card h3 {
+  font-size: 2.5rem;
+  color: #e62222;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.stat-card p {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: white;
+}
+
+/* VALUES */
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  padding: 60px 10%;
+  background: #050505;
+  border-top: 1px solid #222;
+}
+
+.value-item {
+  text-align: center;
+  padding: 20px;
+}
+
+.value-item h3 {
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.value-item p {
+  color: #888;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 80px 5%;
+  }
+  .about-stat-grid {
+    gap: 20px;
+  }
+}

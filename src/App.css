@@ -1,0 +1,374 @@
+/* ================================
+   GLOBAL RESET & THEME VARIABLES
+================================ */
+:root {
+  --primary-black: #020202; /* Deepest black */
+  --secondary-black: #0a0a0a;
+  --primary-red: #e62222;
+  --text-white: #ffffff;
+  --text-gray: #b0b0b0;
+  --font-oswald: 'Oswald', sans-serif;
+  --font-roboto: 'Roboto Condensed', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-black);
+  color: var(--text-white);
+  overflow-x: hidden;
+  font-family: var(--font-roboto); /* Default body font */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-oswald);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ... existing links ... */
+
+/* ================================
+   UTILITIES
+================================ */
+.red-text {
+  color: var(--primary-red);
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 50px;
+  position: relative;
+  display: inline-block;
+}
+
+/* ================================
+   BUTTONS
+================================ */
+.btn-red-slant {
+  background: var(--primary-red);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-family: var(--font-oswald);
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+  transition: all 0.3s ease;
+}
+
+.btn-red-slant:hover {
+  background: #ff0000;
+  transform: translateX(5px);
+}
+
+.btn-outline-slant {
+  background: transparent;
+  color: var(--text-white);
+  border: 2px solid var(--text-white);
+  padding: 12px 28px;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+  transition: all 0.3s ease;
+}
+
+.btn-outline-slant:hover {
+  background: var(--text-white);
+  color: var(--primary-black);
+}
+
+/* ================================
+   SCROLL ANIMATION
+================================ */
+.reveal {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ================================
+   NAVIGATION
+================================ */
+.navbar {
+  background-color: var(--primary-black);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 3px solid var(--primary-red);
+  padding: 0 2px; /* Add some padding to container if needed, or handle in children */
+}
+
+.nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 5%; /* Reduced from 15px to 10px */
+  border-bottom: 1px solid #222;
+}
+
+/* Logo Font Reverted */
+
+/* Revert Logo Font */
+/* Logo Image */
+/* Logo - Text Based (Restored) */
+/* Logo - Text Based (Restored) */
+.logo {
+  font-family: var(--font-oswald); /* Use display font for logo */
+  font-size: 2.5rem; /* Adjusted for better proportion */
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 0px;
+  color: white;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1; /* Better vertical breathing room */
+  display: flex; /* Ensures span aligns perfectly */
+  align-items: center;
+}
+
+/* Social Icons (Footer) */
+.social-icons-container {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #222;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  text-decoration: none; /* Ensure no underline */
+}
+
+.social-icon-circle:hover {
+  background-color: var(--primary-red);
+  transform: translateY(-3px);
+  color: white;
+}
+
+.cart-link:hover {
+  color: var(--primary-red);
+}
+
+.cart-link {
+  font-weight: 800; /* Made bold per request */
+  font-family: var(--font-oswald);
+  letter-spacing: 1px;
+}
+
+.nav-links ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 40px;
+}
+
+.nav-links a {
+  font-family: var(--font-oswald);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--primary-red);
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ================================
+   LOGO ANIMATION
+================================ */
+.v-logo-tilt {
+  height: 35px;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+
+.v-logo-tilt:hover {
+  transform: rotate(-6deg) scale(1.1);
+  filter: drop-shadow(0 0 10px rgba(230, 34, 34, 0.4));
+}
+
+/* ================================
+   CARDS (PRODUCT / SHOP / BLOG)
+================================ */
+.product-card,
+.shop-card,
+.blog-card {
+  position: relative;
+  background: var(--secondary-black);
+  border: 1px solid #222;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.product-card:hover,
+.shop-card:hover,
+.blog-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary-red);
+  box-shadow: 0 0 30px rgba(230, 34, 34, 0.3);
+}
+
+.product-card::after,
+.shop-card::after,
+.blog-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(230, 34, 34, 0.15) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+
+.product-card:hover::after,
+.shop-card:hover::after,
+.blog-card:hover::after {
+  opacity: 1;
+}
+
+.product-img img,
+.shop-img-box img,
+.blog-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.product-card:hover img,
+.shop-card:hover img,
+.blog-card:hover img {
+  transform: scale(1.1);
+}
+
+/* ================================
+   FOOTER & NEWSLETTER
+================================ */
+.footer {
+  background-color: var(--secondary-black);
+  padding: 60px 5% 30px;
+  margin-top: 80px;
+  border-top: 4px solid var(--primary-red);
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  align-items: flex-start;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-weight: 700;
+}
+
+.footer-nav a:hover {
+  color: var(--primary-red);
+}
+
+.newsletter {
+  text-align: right;
+  margin-left: auto;
+}
+
+.newsletter label {
+  display: block;
+  margin-bottom: 15px;
+  font-family: var(--font-oswald);
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.newsletter-input {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #333; /* Underline only style */
+  padding-bottom: 5px;
+}
+
+.newsletter-input input {
+  background: transparent;
+  border: none;
+  padding: 12px 20px;
+  color: white;
+  width: 300px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.newsletter-input input::placeholder {
+  color: #555;
+  font-style: italic;
+}
+
+.newsletter-input input:focus {
+  border-color: var(--primary-red); /* Handled by container border if needed, but here we act on input focus */
+}
+
+/* Ensure focus effect on container via :focus-within if supported or keep subtle */
+.newsletter-input:focus-within {
+  border-bottom-color: var(--primary-red);
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-top: 1px solid #222;
+  padding-top: 30px;
+}
+
+.social-icons-container {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-copyright {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-gray);
+  letter-spacing: 1px;
+}
