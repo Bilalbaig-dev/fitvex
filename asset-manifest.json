@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/fitvex/static/css/main.7d6c4232.css",
+    "main.js": "/fitvex/static/js/main.765345c2.js",
+    "static/js/453.8612c0c4.chunk.js": "/fitvex/static/js/453.8612c0c4.chunk.js",
+    "index.html": "/fitvex/index.html",
+    "main.7d6c4232.css.map": "/fitvex/static/css/main.7d6c4232.css.map",
+    "main.765345c2.js.map": "/fitvex/static/js/main.765345c2.js.map",
+    "453.8612c0c4.chunk.js.map": "/fitvex/static/js/453.8612c0c4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7d6c4232.css",
+    "static/js/main.765345c2.js"
+  ]
+}
