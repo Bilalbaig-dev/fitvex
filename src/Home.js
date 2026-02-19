@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 
 const Home = ({ addToCart }) => {
-  // AOS is initialized globally in App.js
+  
 
   const features = [
     { title: "PREMIUM QUALITY", desc: "Forged for elite performance" },
