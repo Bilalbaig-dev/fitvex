@@ -14,10 +14,10 @@ const Home = ({ addToCart }) => {
   ];
 
   const categories = [
-    { id: 1, name: "MMA", img: "/gloves.jpg" },
-    { id: 2, name: "JIU-JITSU", img: "/gi.jpg" },
-    { id: 3, name: "STRIKING", img: "/mitts.jpg" },
-    { id: 4, name: "APPAREL", img: "/shorts.jpg" }
+    { id: 1, name: "MMA", img: process.env.PUBLIC_URL + "/gloves.jpg" },
+    { id: 2, name: "JIU-JITSU", img: process.env.PUBLIC_URL + "/gi.jpg" },
+    { id: 3, name: "STRIKING", img: process.env.PUBLIC_URL + "/mitts.jpg" },
+    { id: 4, name: "APPAREL", img: process.env.PUBLIC_URL + "/shorts.jpg" }
   ];
 
   return (
@@ -25,7 +25,7 @@ const Home = ({ addToCart }) => {
 
       {/* CINEMATIC HERO */}
       <section className="hero-cinematic">
-        <div className="hero-bg" style={{ backgroundImage: "url('/hero-bg.png')" }}></div>
+        <div className="hero-bg" style={{ backgroundImage: `url('${process.env.PUBLIC_URL}/hero-bg.png')` }}></div>
         <div className="hero-overlay-gradient"></div>
 
         <div className="hero-content-centered" data-aos="fade-up">
