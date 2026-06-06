@@ -3,9 +3,9 @@ import './Blog.css';
 
 const Blog = () => {
   const posts = [
-    { id: 1, title: "ELITE STRIKING: SPEED DRILLS", category: "TRAINING", img: "/blog1.jpg" },
-    { id: 2, title: "THE SCIENCE OF RECOVERY", category: "LIFESTYLE", img: "/blog2.jpg" },
-    { id: 3, title: "GEAR REVIEW: V-1 GLOVES", category: "INNOVATION", img: "/blog3.jpg" },
+    { id: 1, title: "ELITE STRIKING: SPEED DRILLS", category: "TRAINING", img: process.env.PUBLIC_URL + "/blog1.jpg" },
+    { id: 2, title: "THE SCIENCE OF RECOVERY", category: "LIFESTYLE", img: process.env.PUBLIC_URL + "/blog2.jpg" },
+    { id: 3, title: "GEAR REVIEW: V-1 GLOVES", category: "INNOVATION", img: process.env.PUBLIC_URL + "/blog3.jpg" },
   ];
 
   return (
