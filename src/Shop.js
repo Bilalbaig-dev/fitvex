@@ -13,11 +13,11 @@ const Shop = ({ addToCart }) => {
   }, []);
 
   const products = [
-    { id: 1, name: "PRO MMA GLOVES", price: 49.00, category: "GEAR", img: "/gloves.jpg" },
-    { id: 2, name: "BJJ GI - WHITE", price: 89.00, category: "APPAREL", img: "/gi.jpg" },
-    { id: 3, name: "FOCUS MITTS", price: 35.00, category: "GEAR", img: "/mitts.jpg" },
-    { id: 4, name: "SHIN GUARDS", price: 55.00, category: "GEAR", img: "/shin.jpg" },
-    { id: 5, name: "TRAINING SHORTS", price: 29.00, category: "APPAREL", img: "/shorts.jpg" },
+    { id: 1, name: "PRO MMA GLOVES", price: 49.00, category: "GEAR", img: process.env.PUBLIC_URL + "/gloves.jpg" },
+    { id: 2, name: "BJJ GI - WHITE", price: 89.00, category: "APPAREL", img: process.env.PUBLIC_URL + "/gi.jpg" },
+    { id: 3, name: "FOCUS MITTS", price: 35.00, category: "GEAR", img: process.env.PUBLIC_URL + "/mitts.jpg" },
+    { id: 4, name: "SHIN GUARDS", price: 55.00, category: "GEAR", img: process.env.PUBLIC_URL + "/shin.jpg" },
+    { id: 5, name: "TRAINING SHORTS", price: 29.00, category: "APPAREL", img: process.env.PUBLIC_URL + "/shorts.jpg" },
   ];
 
   const filteredProducts = filter === 'ALL'
