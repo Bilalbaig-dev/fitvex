@@ -14,11 +14,11 @@ import ProductDetail from './ProductDetail';
 
 // Sample products
 const products = [
-  { id: 1, name: "PRO MMA GLOVES", price: 49.00, category: "GEAR", img: "/gloves.jpg" },
-  { id: 2, name: "BJJ GI - WHITE", price: 89.00, category: "APPAREL", img: "/gi.jpg" },
-  { id: 3, name: "FOCUS MITTS", price: 35.00, category: "GEAR", img: "/mitts.jpg" },
-  { id: 4, name: "SHIN GUARDS", price: 55.00, category: "GEAR", img: "/shin.jpg" },
-  { id: 5, name: "TRAINING SHORTS", price: 29.00, category: "APPAREL", img: "/shorts.jpg" },
+  { id: 1, name: "PRO MMA GLOVES", price: 49.00, category: "GEAR", img: process.env.PUBLIC_URL + "/gloves.jpg" },
+  { id: 2, name: "BJJ GI - WHITE", price: 89.00, category: "APPAREL", img: process.env.PUBLIC_URL + "/gi.jpg" },
+  { id: 3, name: "FOCUS MITTS", price: 35.00, category: "GEAR", img: process.env.PUBLIC_URL + "/mitts.jpg" },
+  { id: 4, name: "SHIN GUARDS", price: 55.00, category: "GEAR", img: process.env.PUBLIC_URL + "/shin.jpg" },
+  { id: 5, name: "TRAINING SHORTS", price: 29.00, category: "APPAREL", img: process.env.PUBLIC_URL + "/shorts.jpg" },
 ];
 
 const ScrollToTop = () => {
@@ -80,7 +80,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <ScrollToTop />
       <div className="App">
 
@@ -105,7 +105,7 @@ function App() {
               <li><Link to="/">HOME</Link></li>
               <li><Link to="/shop">SHOP</Link></li>
               <div className="nav-logo-center">
-                <Link to="/"><img src="/logo.svg" alt="FITVEX" className="v-logo-tilt" /></Link>
+                <Link to="/"><img src={process.env.PUBLIC_URL + "/logo.svg"} alt="FITVEX" className="v-logo-tilt" /></Link>
               </div>
               <li><Link to="/about">ABOUT US</Link></li>
               <li><Link to="/contact">CONTACT</Link></li>
